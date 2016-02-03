@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DataController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // Create datacontroller and initialize database
+    DataController *dataController = [[DataController alloc]init];
+    [dataController initDatabase];
+    [dataController release];
 }
 
 - (void)didReceiveMemoryWarning {
